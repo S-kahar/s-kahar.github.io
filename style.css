@@ -1,489 +1,128 @@
-/* ==========================================
-   CSS VARIABLES (THEME COLORS)
-   Sky Blue & Light Rust Palette
-   ========================================== */
-:root {
-    /* Primary Colors */
-    --sky-blue: #60A5FA;       /* Modern, professional sky blue */
-    --sky-blue-dark: #3B82F6;  /* Darker shade for hover states */
-    --sky-blue-light: #EFF6FF; /* Very light blue for backgrounds */
-    
-    /* Accent Colors */
-    --light-rust: #E07A5F;     /* Elegant light rust/terracotta */
-    --light-rust-dark: #C9664D;/* Darker rust for hover states */
-    
-    /* Neutrals */
-    --text-main: #1E293B;      /* Deep slate for readability */
-    --text-muted: #64748B;     /* Softer slate for secondary text */
-    --bg-main: #FFFFFF;        /* Pure white */
-    --bg-alt: #F8FAFC;         /* Off-white for section contrast */
-    --border-color: #E2E8F0;   /* Light gray for borders */
-    
-    /* Typography */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-    
-    /* Transitions & Shadows */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-}
-
-/* ==========================================
-   BASE STYLES & RESET
-   ========================================== */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
+/* Color Variables */
+:root {
+    --primary: #4DA6FF;      /* Sky Blue */
+    --accent: #C97A56;       /* Light Rust */
+    --bg-soft: #F7FAFC;
+    --text: #222;
+    --muted: #666;
+}
+
+/* Body */
 body {
-    font-family: var(--font-body);
-    color: var(--text-main);
-    background-color: var(--bg-main);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg-soft);
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--font-heading);
-    color: var(--text-main);
-    line-height: 1.2;
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition);
+header h1 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: var(--primary);
 }
 
-ul {
+/* Navigation */
+nav ul {
     list-style: none;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* ==========================================
-   NAVIGATION
-   ========================================== */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
-    padding: 1rem 0;
-    transition: var(--transition);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 18px;
 }
 
-.nav-logo {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--text-main);
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease;
 }
 
-.nav-logo span {
-    color: var(--light-rust); /* Rust accent on the dot */
+nav a:hover {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
 }
 
-.nav-links {
+/* Section */
+.about h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+/* Profile */
+.profile {
     display: flex;
-    align-items: center;
-    gap: 2.5rem;
+    gap: 20px;
+    align-items: flex-start;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
 }
 
-.nav-links a {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-muted);
-}
-
-.nav-links a:hover {
-    color: var(--sky-blue-dark);
-}
-
-/* ==========================================
-   BUTTONS
-   ========================================== */
-.btn-primary {
-    background-color: var(--sky-blue);
-    color: #fff !important;
-    padding: 0.75rem 1.5rem;
+.profile img {
+    width: 150px;
+    height: auto;
     border-radius: 6px;
-    font-weight: 500;
-    border: 2px solid var(--sky-blue);
+    border: 2px solid var(--primary);
 }
 
-.btn-primary:hover {
-    background-color: var(--sky-blue-dark);
-    border-color: var(--sky-blue-dark);
-    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+/* Bio */
+.bio p {
+    margin-bottom: 12px;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--text-main) !important;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 500;
-    border: 2px solid var(--border-color);
+.contact {
+    margin-top: 10px;
+    color: var(--muted);
 }
 
-.btn-secondary:hover {
-    border-color: var(--light-rust);
-    color: var(--light-rust) !important;
-}
-
-/* ==========================================
-   HERO SECTION
-   ========================================== */
-.hero {
-    padding: 12rem 0 8rem;
-    background: linear-gradient(135deg, var(--sky-blue-light) 0%, #ffffff 100%);
-    overflow: hidden;
-}
-
-.hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-}
-
-.hero-text {
-    flex: 1;
-    max-width: 600px;
-}
-
-.subtitle {
+/* Links */
+.links a {
     display: inline-block;
-    color: var(--light-rust);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-right: 12px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-main);
+.links a:hover {
+    color: var(--accent);
 }
 
-.hero p {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-/* Abstract visual representation instead of an image */
-.hero-visual {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.shape-blob {
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(45deg, var(--sky-blue), var(--light-rust));
-    animation: morph 8s ease-in-out infinite;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    opacity: 0.8;
-}
-
-@keyframes morph {
-    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-}
-
-/* ==========================================
-   GLOBAL SECTIONS
-   ========================================== */
-.section {
-    padding: 8rem 0;
-}
-
-.bg-alt {
-    background-color: var(--bg-alt);
-}
-
-.section-header {
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 12px;
     text-align: center;
-    margin-bottom: 4rem;
+    color: var(--muted);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
 }
 
-.section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.divider {
-    height: 3px;
-    width: 60px;
-    background-color: var(--light-rust);
-    margin: 0 auto 1.5rem;
-    border-radius: 2px;
-}
-
-.section-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-}
-
-/* ==========================================
-   TIMELINE (ACADEMICS & CAREER)
-   ========================================== */
-.timeline {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-}
-
-/* Vertical Line */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20px;
-    height: 100%;
-    width: 2px;
-    background-color: var(--sky-blue-light);
-}
-
-.timeline-item {
-    position: relative;
-    padding-left: 60px;
-    margin-bottom: 3rem;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: 11px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--sky-blue);
-    border: 4px solid var(--bg-main);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--sky-blue-light);
-    transition: var(--transition);
-}
-
-.timeline-item:hover .timeline-dot {
-    background-color: var(--light-rust);
-    box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.2);
-}
-
-.timeline-date {
-    display: inline-block;
-    background-color: var(--sky-blue-light);
-    color: var(--sky-blue-dark);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.timeline-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-}
-
-.timeline-content h4 {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-bottom: 1rem;
-    font-family: var(--font-body);
-}
-
-/* ==========================================
-   DIGITAL LIBRARY (CARDS GRID)
-   ========================================== */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background: var(--bg-main);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--sky-blue);
-}
-
-.card-icon {
-    font-size: 2rem;
-    color: var(--light-rust);
-    margin-bottom: 1.5rem;
-}
-
-.card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.card-desc {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.card-links li {
-    margin-bottom: 0.75rem;
-}
-
-.card-links a {
-    color: var(--text-main);
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.card-links a i {
-    color: var(--sky-blue);
-    font-size: 0.9rem;
-}
-
-.card-links a:hover {
-    color: var(--light-rust);
-}
-
-.card-links a:hover i {
-    color: var(--light-rust);
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-.footer {
-    background-color: var(--text-main);
-    color: #fff;
-    padding: 4rem 0 2rem;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-.footer-brand h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-brand span {
-    color: var(--light-rust);
-}
-
-.footer-brand p {
-    color: #94A3B8;
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-links a {
-    color: #CBD5E1;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-links a:hover {
-    color: var(--sky-blue);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #64748B;
-    font-size: 0.9rem;
-}
-
-/* ==========================================
-   RESPONSIVE DESIGN (MOBILE)
-   ========================================== */
-@media (max-width: 900px) {
-    .hero-container {
+/* Responsive */
+@media (max-width: 600px) {
+    .profile {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .shape-blob {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* In a real app, add a hamburger menu JS here */
-    }
-    
-    .hero h1 {
-        font-size: 2.8rem;
     }
 }
