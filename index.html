@@ -3,61 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics & Study Notes</title>
+    <title>Professional Portfolio & Digital Library</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1 class="site-title"><a href="#">Academics & Study Notes</a></h1>
-    </header>
 
-    <nav class="main-navigation">
-        <ul class="nav-menu">
-            <li><a href="#about" class="active">About</a></li>
-            <li><a href="#career">Career & Academics</a></li>
-            <li><a href="#subjects">Subject Folders</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Workspace<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Academics & Career</a></li>
+                <li><a href="#library">Study Notes</a></li>
+                <li><a href="#contact" class="btn-primary">Get in Touch</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="site-content">
-        <main class="main-area">
-            <article class="page-content" id="about">
-                <header class="entry-header">
-                    <h2 class="entry-title">About</h2>
-                </header>
-                <div class="entry-content">
-                    <p>Welcome to my digital workspace and portfolio.</p>
-                    <p>My academic focus and interests broadly lie in mechanical engineering, problem-solving, and continuous learning. In particular, I use this space to document my understanding of concepts like planar linkages, thermodynamics, and broader technical subjects.</p>
-                    <p>This repository serves as an organized collection of my career milestones, academic progression, and structured study notes.</p>
+    <header class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="subtitle">Digital Portfolio & Second Brain</span>
+                <h1>Engineering Solutions.<br>Mastering Dynamics.</h1>
+                <p>Welcome to my digital workspace. This repository documents my academic progression, professional milestones, and technical analyses—from the intricacies of mechanical design to the psychology of effective communication.</p>
+                <div class="hero-buttons">
+                    <a href="#library" class="btn-primary">Explore My Notes</a>
+                    <a href="#experience" class="btn-secondary">View Timeline</a>
                 </div>
-            </article>
-        </main>
+            </div>
+            <div class="hero-visual">
+                <div class="shape-blob"></div>
+            </div>
+        </div>
+    </header>
 
-        <aside class="sidebar">
-            <section class="widget">
-                <h2 class="widget-title">Quick Links</h2>
-                <ul>
-                    <li><a href="mailto:your.email@example.com">Email Me</a></li>
-                    <li><a href="#">GitHub Profile</a></li>
-                    <li><a href="#">LinkedIn Profile</a></li>
-                    <li><a href="#">Resume / CV</a></li>
-                </ul>
-            </section>
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic & Career Timeline</h2>
+                <div class="divider"></div>
+                <p>A chronological record of my professional and educational journey.</p>
+            </div>
             
-            <section class="widget">
-                <h2 class="widget-title">Recent Notes</h2>
-                <ul>
-                    <li><a href="#">Kinematics of Machinery</a></li>
-                    <li><a href="#">Mechanics of Materials</a></li>
-                </ul>
-            </section>
-        </aside>
-    </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Current</span>
+                        <h3>Advanced Studies & Research</h3>
+                        <h4>University / Organization Name</h4>
+                        <p>Currently focusing on complex mechanical systems, applying theoretical physics to real-world engineering challenges, and continuously refining technical problem-solving frameworks.</p>
+                    </div>
+                </div>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 My Portfolio. Built from scratch on GitHub Pages.</p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - 2025</span>
+                        <h3>Foundational Degree Program</h3>
+                        <h4>Institution Name</h4>
+                        <p>Completed comprehensive coursework in core engineering principles, mathematics, and systems design. Led collaborative projects bridging multiple technical disciplines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-alt" id="library">
+        <div class="container">
+            <div class="section-header">
+                <h2>Digital Library</h2>
+                <div class="divider"></div>
+                <p>Categorized study notes, research summaries, and reference materials.</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-gear"></i></div>
+                    <h3>Mechanical Engineering</h3>
+                    <p class="card-desc">Kinematics, dynamics, and structural analysis.</p>
+                    <ul class="card-links">
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Planar Linkages Analysis</a></li>
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Thermodynamics Formularies</a></li>
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Fluid Mechanics Basics</a></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Personal Development</h3>
+                    <p class="card-desc">Leadership, psychology, and strategic communication.</p>
+                    <ul class="card-links">
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Notes: The Art of Persuasion</a></li>
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Conflict Resolution Frameworks</a></li>
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Habit Building Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+                    <h3>Biomechanics & Sports</h3>
+                    <p class="card-desc">Applying physics to human movement and optimization.</p>
+                    <ul class="card-links">
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Kinematics of the Badminton Smash</a></li>
+                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Joint Stress & Recovery Models</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Workspace<span>.</span></h2>
+                <p>Building knowledge, one commit at a time.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:hello@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Professional Portfolio. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
