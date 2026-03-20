@@ -122,3 +122,28 @@ footer {
     font-size: 12px;
     color: var(--muted);
 }
+/* ===== CV Button ===== */
+.cv-button {
+    margin-top: 14px;
+}
+
+.cv-button a {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-decoration: none;
+
+    color: white;
+    background: var(--blue);
+
+    border-radius: 4px;
+    border: 1px solid var(--blue);
+
+    transition: 0.2s ease;
+}
+
+/* Hover */
+.cv-button a:hover {
+    background: white;
+    color: var(--blue);
+}
