@@ -3,85 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio & Notes</title>
+    <title>Academics & Study Notes</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">MyWorkspace.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
+    <header class="site-header">
+        <h1 class="site-title"><a href="#">Academics & Study Notes</a></h1>
+    </header>
+
+    <nav class="main-navigation">
+        <ul class="nav-menu">
+            <li><a href="#about" class="active">About</a></li>
             <li><a href="#career">Career & Academics</a></li>
-            <li><a href="#notes">Study Notes</a></li>
+            <li><a href="#subjects">Subject Folders</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero" id="about">
-        <div class="hero-content">
-            <h1>Hi, I'm a Lifelong Learner.</h1>
-            <p>Welcome to my digital garden. This is where I document my academic journey, professional experience, and technical study notes.</p>
-            <a href="#notes" class="btn">Browse My Notes</a>
-        </div>
-    </header>
-
-    <section class="content-section" id="career">
-        <div class="container">
-            <h2>Career & Academics</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Current Degree / Position</h3>
-                    <p class="date">2023 - Present</p>
-                    <p>Details about your current academic standing, projects you are working on, or your current job role.</p>
+    <div class="site-content">
+        <main class="main-area">
+            <article class="page-content" id="about">
+                <header class="entry-header">
+                    <h2 class="entry-title">About</h2>
+                </header>
+                <div class="entry-content">
+                    <p>Welcome to my digital workspace and portfolio.</p>
+                    <p>My academic focus and interests broadly lie in mechanical engineering, problem-solving, and continuous learning. In particular, I use this space to document my understanding of concepts like planar linkages, thermodynamics, and broader technical subjects.</p>
+                    <p>This repository serves as an organized collection of my career milestones, academic progression, and structured study notes.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3>Previous Education / Role</h3>
-                    <p class="date">2021 - 2023</p>
-                    <p>Key achievements, GPA, or responsibilities held during this time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </article>
+        </main>
 
-    <section class="content-section bg-light" id="notes">
-        <div class="container">
-            <h2>Subject Folders & Notes</h2>
-            <div class="folder-grid">
-                <div class="folder-card">
-                    <div class="folder-icon">📁</div>
-                    <h3>Mechanical Engineering</h3>
-                    <ul class="note-links">
-                        <li><a href="#">Planar Linkages</a></li>
-                        <li><a href="#">Thermodynamics</a></li>
-                        <li><a href="#">Fluid Mechanics</a></li>
-                    </ul>
-                </div>
+        <aside class="sidebar">
+            <section class="widget">
+                <h2 class="widget-title">Quick Links</h2>
+                <ul>
+                    <li><a href="mailto:your.email@example.com">Email Me</a></li>
+                    <li><a href="#">GitHub Profile</a></li>
+                    <li><a href="#">LinkedIn Profile</a></li>
+                    <li><a href="#">Resume / CV</a></li>
+                </ul>
+            </section>
+            
+            <section class="widget">
+                <h2 class="widget-title">Recent Notes</h2>
+                <ul>
+                    <li><a href="#">Kinematics of Machinery</a></li>
+                    <li><a href="#">Mechanics of Materials</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
 
-                <div class="folder-card">
-                    <div class="folder-icon">📁</div>
-                    <h3>Computer Science</h3>
-                    <ul class="note-links">
-                        <li><a href="#">Data Structures</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Algorithms</a></li>
-                    </ul>
-                </div>
-
-                <div class="folder-card">
-                    <div class="folder-icon">📁</div>
-                    <h3>Personal Development</h3>
-                    <ul class="note-links">
-                        <li><a href="#">Communication Skills</a></li>
-                        <li><a href="#">Project Management</a></li>
-                        <li><a href="#">Leadership</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 My Portfolio. Built from scratch.</p>
+    <footer class="site-footer">
+        <p>&copy; 2026 My Portfolio. Built from scratch on GitHub Pages.</p>
     </footer>
 </body>
 </html>
