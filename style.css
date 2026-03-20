@@ -1,128 +1,101 @@
-/* Reset */
+/* ===== Reset ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Color Variables */
+/* ===== Colors ===== */
 :root {
-    --primary: #4DA6FF;      /* Sky Blue */
-    --accent: #C97A56;       /* Light Rust */
-    --bg-soft: #F7FAFC;
+    --blue: #4DA6FF;     /* Sky Blue */
+    --rust: #C97A56;     /* Light Rust */
+    --bg: #F7FAFC;
     --text: #222;
-    --muted: #666;
 }
 
-/* Body */
+/* ===== Body ===== */
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.6;
+    font-family: Georgia, serif;
+    background-color: var(--bg);
     color: var(--text);
-    background-color: var(--bg-soft);
     max-width: 900px;
     margin: auto;
     padding: 20px;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-header h1 {
-    font-size: 28px;
-    font-weight: normal;
+h1 {
+    color: var(--blue);
     margin-bottom: 10px;
-    color: var(--primary);
 }
 
-/* Navigation */
+/* ===== Nav ===== */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 15px;
 }
 
 nav a {
     text-decoration: none;
     color: var(--text);
-    font-size: 14px;
-    padding-bottom: 3px;
-    border-bottom: 2px solid transparent;
-    transition: 0.2s ease;
 }
 
 nav a:hover {
-    color: var(--primary);
-    border-bottom: 2px solid var(--accent);
+    color: var(--rust);
 }
 
-/* Section */
-.about h2 {
-    font-size: 22px;
+/* ===== Section ===== */
+h2 {
+    color: var(--rust);
     margin-bottom: 15px;
-    color: var(--accent);
 }
 
-/* Profile */
+/* ===== Profile Layout ===== */
 .profile {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #eee;
 }
 
 .profile img {
     width: 150px;
-    height: auto;
-    border-radius: 6px;
-    border: 2px solid var(--primary);
+    border-radius: 5px;
+    border: 2px solid var(--blue);
 }
 
-/* Bio */
+/* ===== Text ===== */
 .bio p {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.contact {
-    margin-top: 10px;
-    color: var(--muted);
-}
-
-/* Links */
+/* ===== Links ===== */
 .links a {
-    display: inline-block;
-    margin-right: 12px;
-    font-size: 14px;
-    color: var(--primary);
-    font-weight: 500;
+    margin-right: 10px;
+    color: var(--blue);
 }
 
 .links a:hover {
-    color: var(--accent);
+    color: var(--rust);
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
     margin-top: 40px;
-    font-size: 12px;
     text-align: center;
-    color: var(--muted);
-    border-top: 1px solid #eee;
-    padding-top: 10px;
+    font-size: 12px;
+    color: #666;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
     .profile {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 }
