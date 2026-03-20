@@ -1,101 +1,176 @@
 /* ===== Reset ===== */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== Colors ===== */
+/* ===== Design System ===== */
 :root {
-    --blue: #4DA6FF;     /* Sky Blue */
-    --rust: #C97A56;     /* Light Rust */
-    --bg: #F7FAFC;
+    --blue: #4DA6FF;      /* Sky Blue */
+    --rust: #C97A56;      /* Light Rust */
     --text: #222;
+    --muted: #666;
+    --bg: #FAFBFC;
+    --border: #E6E8EB;
 }
 
-/* ===== Body ===== */
+/* ===== Base ===== */
 body {
-    font-family: Georgia, serif;
-    background-color: var(--bg);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.7;
     color: var(--text);
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+    background-color: var(--bg);
+
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* ===== Typography ===== */
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--rust);
+    margin-bottom: 14px;
+}
+
+p {
+    margin-bottom: 12px;
 }
 
 /* ===== Header ===== */
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
 }
 
-h1 {
-    color: var(--blue);
-    margin-bottom: 10px;
-}
-
-/* ===== Nav ===== */
+/* ===== Navigation ===== */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 18px;
+    margin-top: 6px;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--text);
+    font-size: 14px;
+    color: #444;
+    letter-spacing: 0.3px;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: var(--rust);
+    color: var(--blue);
 }
 
 /* ===== Section ===== */
-h2 {
-    color: var(--rust);
-    margin-bottom: 15px;
+section {
+    margin-top: 10px;
 }
 
 /* ===== Profile Layout ===== */
 .profile {
     display: flex;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 26px;
+    margin-top: 10px;
 }
 
+/* ===== Profile Image ===== */
 .profile img {
-    width: 150px;
-    border-radius: 5px;
+    width: 170px;
+    height: auto;
+
+    border-radius: 50%;
     border: 2px solid var(--blue);
+
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.3s ease;
 }
 
-/* ===== Text ===== */
+.profile img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.04);
+}
+
+/* ===== Bio ===== */
+.bio {
+    max-width: 520px;
+}
+
 .bio p {
-    margin-bottom: 10px;
+    color: var(--text);
+}
+
+/* ===== Contact ===== */
+.contact {
+    margin-top: 10px;
+    color: var(--muted);
 }
 
 /* ===== Links ===== */
+.links {
+    margin-top: 8px;
+}
+
 .links a {
-    margin-right: 10px;
+    font-size: 14px;
     color: var(--blue);
+    text-decoration: none;
+    margin-right: 12px;
+    transition: color 0.2s ease;
 }
 
 .links a:hover {
     color: var(--rust);
+    text-decoration: underline;
 }
 
 /* ===== Footer ===== */
 footer {
-    margin-top: 40px;
+    margin-top: 50px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+
     text-align: center;
     font-size: 12px;
-    color: #666;
+    color: var(--muted);
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+    body {
+        padding: 24px 16px;
+    }
+
     .profile {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+    }
+
+    .bio {
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
