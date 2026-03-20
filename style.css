@@ -147,3 +147,27 @@ footer {
     background: white;
     color: var(--blue);
 }
+/* ===== Notes Section ===== */
+.notes-list li {
+    margin-bottom: 8px;
+}
+
+/* Resource tags */
+.notes-list a {
+    margin-left: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/* Hover */
+.notes-list a:hover {
+    text-decoration: underline;
+}
+
+/* Subject spacing */
+h3 {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    color: var(--rust);
+}
