@@ -3,134 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio & Digital Library</title>
+    <title>Geometry and Mechanics of Solids</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Workspace<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Academics & Career</a></li>
-                <li><a href="#library">Study Notes</a></li>
-                <li><a href="#contact" class="btn-primary">Get in Touch</a></li>
-            </ul>
-        </div>
+<header>
+    <h1>Geometry and Mechanics of Solids</h1>
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Teaching</a></li>
+            <li><a href="#">Openings</a></li>
+        </ul>
     </nav>
+</header>
 
-    <header class="hero" id="about">
-        <div class="hero-container">
-            <div class="hero-text">
-                <span class="subtitle">Digital Portfolio & Second Brain</span>
-                <h1>Engineering Solutions.<br>Mastering Dynamics.</h1>
-                <p>Welcome to my digital workspace. This repository documents my academic progression, professional milestones, and technical analyses—from the intricacies of mechanical design to the psychology of effective communication.</p>
-                <div class="hero-buttons">
-                    <a href="#library" class="btn-primary">Explore My Notes</a>
-                    <a href="#experience" class="btn-secondary">View Timeline</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="shape-blob"></div>
-            </div>
-        </div>
-    </header>
+<main>
+    <section class="about">
+        <h2>About</h2>
 
-    <section class="section" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2>Academic & Career Timeline</h2>
-                <div class="divider"></div>
-                <p>A chronological record of my professional and educational journey.</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Current</span>
-                        <h3>Advanced Studies & Research</h3>
-                        <h4>University / Organization Name</h4>
-                        <p>Currently focusing on complex mechanical systems, applying theoretical physics to real-world engineering challenges, and continuously refining technical problem-solving frameworks.</p>
-                    </div>
-                </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Image">
+            <div class="bio">
+                <p>
+                    I am an assistant professor of mechanical engineering at IIT Gandhinagar. 
+                    My research interests broadly lie in continuum mechanics and applied mathematics.
+                </p>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023 - 2025</span>
-                        <h3>Foundational Degree Program</h3>
-                        <h4>Institution Name</h4>
-                        <p>Completed comprehensive coursework in core engineering principles, mathematics, and systems design. Led collaborative projects bridging multiple technical disciplines.</p>
-                    </div>
+                <p>
+                    In particular, I am interested in the mechanics of thin bodies — such as strings,
+                    rods, ribbons, membranes, and plates — and their applications to engineering problems.
+                </p>
+
+                <p class="contact">
+                    <strong>Harmeet Singh</strong><br>
+                    harmeet.singh@iitgn.ac.in
+                </p>
+
+                <div class="links">
+                    <a href="#">IIT GN Faculty page</a>
+                    <a href="#">Google Scholar</a>
+                    <a href="#">ORCID</a>
                 </div>
             </div>
         </div>
     </section>
+</main>
 
-    <section class="section bg-alt" id="library">
-        <div class="container">
-            <div class="section-header">
-                <h2>Digital Library</h2>
-                <div class="divider"></div>
-                <p>Categorized study notes, research summaries, and reference materials.</p>
-            </div>
-
-            <div class="grid-container">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-gear"></i></div>
-                    <h3>Mechanical Engineering</h3>
-                    <p class="card-desc">Kinematics, dynamics, and structural analysis.</p>
-                    <ul class="card-links">
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Planar Linkages Analysis</a></li>
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Thermodynamics Formularies</a></li>
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Fluid Mechanics Basics</a></li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-users"></i></div>
-                    <h3>Personal Development</h3>
-                    <p class="card-desc">Leadership, psychology, and strategic communication.</p>
-                    <ul class="card-links">
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Notes: The Art of Persuasion</a></li>
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Conflict Resolution Frameworks</a></li>
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Habit Building Systems</a></li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
-                    <h3>Biomechanics & Sports</h3>
-                    <p class="card-desc">Applying physics to human movement and optimization.</p>
-                    <ul class="card-links">
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Kinematics of the Badminton Smash</a></li>
-                        <li><a href="#"><i class="fa-regular fa-file-lines"></i> Joint Stress & Recovery Models</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer" id="contact">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h2>Workspace<span>.</span></h2>
-                <p>Building knowledge, one commit at a time.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:hello@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Professional Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
+<footer>
+    <p>© 2026 Geometry and Mechanics of Solids</p>
+</footer>
 
 </body>
 </html>
