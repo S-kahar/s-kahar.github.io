@@ -30,6 +30,11 @@ body {
     padding: 32px 20px;
 }
 
+/* Add breathing room for pages */
+main {
+    margin-top: 20px;
+}
+
 /* ===== Header ===== */
 header {
     margin-bottom: 24px;
@@ -52,7 +57,7 @@ h1 {
 /* ===== Navigation (Rust Strip) ===== */
 nav {
     background: var(--rust);
-    padding: 8px 0;
+    padding: 10px 0;
     border-radius: 4px;
 }
 
@@ -61,16 +66,29 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 22px;
+    flex-wrap: wrap;
 }
 
+/* Links */
 nav a {
     text-decoration: none;
     font-size: 14px;
     color: white;
+    padding: 4px 6px;
+    border-radius: 3px;
+    transition: 0.2s ease;
 }
 
+/* Hover */
 nav a:hover {
-    color: #FFE9DF;
+    background: rgba(255,255,255,0.15);
+}
+
+/* Active page (ADD class="active" manually in HTML) */
+nav a.active {
+    background: white;
+    color: var(--rust);
+    font-weight: 500;
 }
 
 /* ===== Sections ===== */
@@ -83,7 +101,9 @@ h2 {
     font-size: 20px;
     font-weight: 500;
     color: var(--rust);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
 }
 
 /* ===== Profile ===== */
@@ -112,6 +132,28 @@ h2 {
     max-width: 520px;
 }
 
+/* Contact block */
+.contact {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* External links */
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--blue);
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
 /* ===== Lists ===== */
 ul {
     padding-left: 18px;
@@ -128,8 +170,8 @@ li {
 
 /* ===== Footer ===== */
 footer {
-    margin-top: 40px;
-    padding-top: 10px;
+    margin-top: 50px;
+    padding-top: 12px;
     border-top: 1px solid var(--border);
 
     font-size: 12px;
@@ -139,6 +181,10 @@ footer {
 
 /* ===== Responsive ===== */
 @media (max-width: 640px) {
+    body {
+        padding: 24px 14px;
+    }
+
     .profile {
         flex-direction: column;
         align-items: center;
@@ -146,7 +192,6 @@ footer {
     }
 
     nav ul {
-        flex-wrap: wrap;
         gap: 10px;
     }
 }
