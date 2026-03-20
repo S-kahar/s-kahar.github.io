@@ -3,30 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beautiful Website</title>
+    <title>My Portfolio & Notes</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">MySite.</div>
+        <div class="logo">MyWorkspace.</div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#career">Career & Academics</a></li>
+            <li><a href="#notes">Study Notes</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="about">
         <div class="hero-content">
-            <h1>Welcome to the Future.</h1>
-            <p>I built this beautiful website from scratch using GitHub Pages.</p>
-            <a href="#" class="btn">Explore Now</a>
+            <h1>Hi, I'm a Lifelong Learner.</h1>
+            <p>Welcome to my digital garden. This is where I document my academic journey, professional experience, and technical study notes.</p>
+            <a href="#notes" class="btn">Browse My Notes</a>
         </div>
     </header>
 
+    <section class="content-section" id="career">
+        <div class="container">
+            <h2>Career & Academics</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Current Degree / Position</h3>
+                    <p class="date">2023 - Present</p>
+                    <p>Details about your current academic standing, projects you are working on, or your current job role.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Previous Education / Role</h3>
+                    <p class="date">2021 - 2023</p>
+                    <p>Key achievements, GPA, or responsibilities held during this time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section bg-light" id="notes">
+        <div class="container">
+            <h2>Subject Folders & Notes</h2>
+            <div class="folder-grid">
+                <div class="folder-card">
+                    <div class="folder-icon">📁</div>
+                    <h3>Mechanical Engineering</h3>
+                    <ul class="note-links">
+                        <li><a href="#">Planar Linkages</a></li>
+                        <li><a href="#">Thermodynamics</a></li>
+                        <li><a href="#">Fluid Mechanics</a></li>
+                    </ul>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon">📁</div>
+                    <h3>Computer Science</h3>
+                    <ul class="note-links">
+                        <li><a href="#">Data Structures</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Algorithms</a></li>
+                    </ul>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-icon">📁</div>
+                    <h3>Personal Development</h3>
+                    <ul class="note-links">
+                        <li><a href="#">Communication Skills</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Leadership</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 My Beautiful Website. All rights reserved.</p>
+        <p>&copy; 2026 My Portfolio. Built from scratch.</p>
     </footer>
 </body>
 </html>
